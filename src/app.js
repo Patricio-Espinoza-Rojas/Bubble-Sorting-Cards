@@ -1,20 +1,17 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-/* Numbers and Suits of the Deck */
 const suits = ["spade", "heart", "diamond", "clover"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 /* Main Function */
-function generateCardArray(number) {
+function generateCard(number) {
   let cardArray = [];
   for (let i = 0; i < number; i++) {
     cardArray.push(cardPick());
   }
   return cardArray;
 }
-/* Random Card picker */
 function cardPick() {
   var numberSuit = Math.floor(Math.random() * 4);
   var numberNum = Math.floor(Math.random() * 13);
@@ -179,10 +176,10 @@ drawButton.addEventListener("click", function() {
   } else {
     if (document.querySelector("#cardDisplay").hasChildNodes()) {
       document.querySelector("#cardDisplay").innerHTML = "";
-      cardArray = generateCardArray(input);
+      cardArray = generateCard(input);
       renderCardArray(cardArray);
     } else {
-      cardArray = generateCardArray(input);
+      cardArray = generateCard(input);
       renderCardArray(cardArray);
     }
   }
