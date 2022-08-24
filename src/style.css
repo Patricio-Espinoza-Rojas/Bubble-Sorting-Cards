@@ -1,1 +1,48 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.header {
+  display: flex;
+  align-content: flex-start;
+}
+
+body {
+  background-color: green;
+}
+
+#cardDisplay {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cardbody {
+  background-color: white;
+  width: 150px;
+  height: 200px;
+  margin-top: 100px;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 15px;
+}
+
+#upperIcon {
+  font-size: 40px;
+}
+
+#number {
+  font-size: 40px;
+  text-align: center;
+}
+
+#lowerIcon {
+  font-size: 40px;
+  transform: rotate(180deg);
+}
+
+#bubbleLog {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body > h3:nth-of-type(1) {
+  padding-top: 100px;
+}
